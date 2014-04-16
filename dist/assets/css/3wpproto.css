@@ -1,0 +1,163 @@
+html {
+	font-size: 40px;
+	line-height: 1;
+
+	/* using http://css-tricks.com/perfect-full-page-background-image/ */
+	background: red url(images/000o_almost_done_love.JPG) fixed no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	font-family: Helvetica;
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+[role="main"] {
+	position: absolute;
+	top: 60%;
+	left: 8%;
+	width: 400px;
+	padding: 1ex 2ex;
+	font-size: 1rem;
+	border-radius: 0.25ex;
+	background-color: red;
+	color: yellow;
+	box-shadow: 0 10px 20px 2px rgba(0,0,0,0.1);
+}
+
+h1 {
+	font-size: 1rem;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	font-weight: bold;
+}
+
+.poem p {
+	font-size: 2rem;
+}
+
+nav {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	padding: 0.5ex 1ex 0.5ex 1.25ex;
+	border-radius: 0.25ex;
+	background-color: navy;
+	color: lightblue;
+	box-shadow: 0 10px 20px 2px rgba(0,0,0,0.3);
+}
+
+.site-title {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.site-title span {
+	display: block;
+	font-size: 0.5rem;
+	line-height: 0.75;
+	text-align: center;
+}
+
+nav ul {
+	vertical-align: middle;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 1rem;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 1em;
+}
+
+nav li:first-child {
+	margin-left: 1.25em;
+}
+
+nav a {
+	position: relative;
+	overflow: hidden;
+	font-size: 80px;
+	width: 2rem;
+	text-decoration: none;
+	text-indent: 100%;
+	white-space: nowrap;
+	color: cyan;
+}
+
+nav a:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	text-indent: 0;
+	text-align: center;
+}
+
+
+/* log in */
+nav h2 {
+	padding:0;
+	margin: 0;
+}
+
+nav form {
+	width: 100%;
+}
+
+nav fieldset {
+	padding: 0;
+	margin: 0 0 1em;
+	border: 0;
+	font-size: 0.666666rem;
+}
+
+nav legend {
+	font-size: 0.666666rem;
+	margin-bottom: 1ex;
+}
+
+nav input, nav button {
+	padding: 0.5ex 1ex 0.5ex 1.25ex;
+	border: 1px solid cyan;
+	border-radius: 1ex;
+	font-size: 0.666666rem;
+	background-color: transparent;
+	color: cyan;
+	vertical-align: middle;
+}
+
+nav input {
+	height: 0.666666rem;
+}
+
+nav button {
+	height: 1.25rem;
+}
+
+nav form p {
+	overflow: hidden;
+	line-height: 1.5rem;
+}
+
+span.network {
+	text-align: center;
+	margin-bottom: 1ex;
+}
+
+nav label {
+}
+
+nav input {
+	display: block;
+}

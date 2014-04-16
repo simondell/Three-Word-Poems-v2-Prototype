@@ -1,0 +1,46 @@
+{
+  "name": "3wp-v2-prototype",
+ "description": "Same as title.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/simondell/3wp-v2-prototype",
+  "author": {
+    "name": "",
+    "url": "http://github.com/simondell/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simondell/3wp-v2-prototype.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simondell/3wp-v2-prototype/issues"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test": "grunt assemble"
+  },
+  "devDependencies": {
+    "assemble": "~0.4.37",
+    "grunt": "~0.4.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "load-grunt-tasks": "~0.4.0",
+    "time-grunt": "~0.3.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/simondell/3wp-v2-prototype/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "assemble",
+    "templates",
+    "handlebars",
+    "site generator",
+    "site builder",
+    "grunt"
+  ]
+}
