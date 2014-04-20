@@ -16,26 +16,38 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
 
     {{> poem }}
 
-    <nav>
+    <header role="banner">
       <div class="site-title">
         <span>three</span>
         <span>word</span>
         <span>poems</span>
       </div>
 
-      <ul>
-        <li><a class="fa fa-search" href="browse.html">Poems</a></li
-        ><li><a class="fa fa-sign-in" href="login.html">Log in</a></li
-        ><li><a class="fa fa-info-circle" href="about.html">About</a></li>
-      </ul>
+      <nav>
+        <ul id="tools">
+          <li><a class="fa fa-search" href="browse.html">Poems</a></li
+          ><li><a class="fa fa-sign-in" href="login.html">Log in</a></li
+          ><li><a class="fa fa-info-circle" href="about.html">About</a></li>
+        </ul>
 
-      {{> body }}
+        {{> body }}
+      </nav>
 
-    </nav>
+      {{#if filterlabel}}
+      <div id="pagination">
+        <span id="filter">{{filterlabel}}</span>
+        {{#if prev}}<a href="{{prev}}.html" class="fa fa-blah">Previous</a>{{/if}}
+        {{#if next}}<a href="{{next}}.html" class="fa fa-blah">Next</a>{{/if}}
+      </div>
+      {{/if}}
+
+    </header>
+
 
 
   </body>

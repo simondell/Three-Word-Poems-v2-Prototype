@@ -1,163 +1,171 @@
-html {
-	font-size: 40px;
-	line-height: 1;
+/* ----------------------------------------------
+ * Reset (actually, I should just include a reset here... )
+ * ---------------------------------------------- */
+article {
+  display: block; }
 
-	/* using http://css-tricks.com/perfect-full-page-background-image/ */
-	background: red url(images/000o_almost_done_love.JPG) fixed no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
+h1, p, ul, ol, li {
+  padding: 0;
+  margin: 0; }
+
+ul, ol {
+  list-style: none; }
+
+/* ----------------------------------------------
+ * Mixins
+ * ---------------------------------------------- */
+.accordion__title, nav legend {
+  font-size: 1;
+  margin-top: 1em;
+  margin-bottom: 1ex;
+  width: 100%;
+  border-bottom: 1px solid lightblue; }
+
+/* ----------------------------------------------
+ * Fonts
+ * ---------------------------------------------- */
+html {
+  font-size: 16px;
+  line-height: 1.25;
+  /* using http://css-tricks.com/perfect-full-page-background-image/ */
+  background: red url(../images/fullsize/000o_almost_done_love_smaller.JPG) fixed no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 body {
-	font-family: Helvetica;
-	font-weight: normal;
-	font-size: 1rem;
-}
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 1rem; }
 
-[role="main"] {
-	position: absolute;
-	top: 60%;
-	left: 8%;
-	width: 400px;
-	padding: 1ex 2ex;
-	font-size: 1rem;
-	border-radius: 0.25ex;
-	background-color: red;
-	color: yellow;
-	box-shadow: 0 10px 20px 2px rgba(0,0,0,0.1);
-}
+/* ----------------------------------------------
+ * Poems
+ * ---------------------------------------------- */
+.poem--main {
+  padding: 1ex 2ex;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px 2px rgba(0, 0, 0, 0.1);
+  background-color: red;
+  color: yellow;
+  position: absolute;
+  top: 60%;
+  left: 8%;
+  width: 400px;
+  font-size: 2rem; }
 
-h1 {
-	font-size: 1rem;
-	margin: 0;
-}
+.poem__title {
+  font-size: 0.5em; }
 
-p {
-	margin: 0;
-	font-weight: bold;
-}
+.poem__body {
+  font-weight: 700; }
 
-.poem p {
-	font-size: 2rem;
-}
+.poem--result .poem__title {
+  font-size: 1em; }
+
+/* ----------------------------------------------
+ * Navigation & tools
+ * ---------------------------------------------- */
+header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 400px; }
 
 nav {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	padding: 0.5ex 1ex 0.5ex 1.25ex;
-	border-radius: 0.25ex;
-	background-color: navy;
-	color: lightblue;
-	box-shadow: 0 10px 20px 2px rgba(0,0,0,0.3);
-}
+  padding: 1ex 2ex;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px 2px rgba(0, 0, 0, 0.1);
+  background-color: navy;
+  color: lightblue;
+  margin-bottom: 1ex; }
 
 .site-title {
-	display: inline-block;
-	vertical-align: middle;
-}
+  display: inline-block;
+  vertical-align: middle;
+  display: none; }
 
 .site-title span {
-	display: block;
-	font-size: 0.5rem;
-	line-height: 0.75;
-	text-align: center;
-}
+  display: block;
+  line-height: 0.75;
+  text-align: center; }
 
-nav ul {
-	vertical-align: middle;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	font-size: 1rem;
-}
+#tools {
+  font-size: 3rem;
+  text-align: right; }
 
-nav li {
-	display: inline-block;
-	margin-left: 1em;
-}
+#tools li {
+  display: inline-block;
+  margin-left: 0.75ex;
+  vertical-align: middle; }
 
-nav li:first-child {
-	margin-left: 1.25em;
-}
+#tools a {
+  position: relative;
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: cyan; }
 
-nav a {
-	position: relative;
-	overflow: hidden;
-	font-size: 80px;
-	width: 2rem;
-	text-decoration: none;
-	text-indent: 100%;
-	white-space: nowrap;
-	color: cyan;
-}
-
-nav a:before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 2rem;
-	text-indent: 0;
-	text-align: center;
-}
-
+#tools a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  text-indent: 0;
+  text-align: center; }
 
 /* log in */
-nav h2 {
-	padding:0;
-	margin: 0;
-}
-
 nav form {
-	width: 100%;
-}
+  width: 100%; }
 
 nav fieldset {
-	padding: 0;
-	margin: 0 0 1em;
-	border: 0;
-	font-size: 0.666666rem;
-}
+  padding: 0;
+  margin: 0 0 1em;
+  border: 0;
+  font-size: 0.66667rem; }
 
-nav legend {
-	font-size: 0.666666rem;
-	margin-bottom: 1ex;
-}
 
 nav input, nav button {
-	padding: 0.5ex 1ex 0.5ex 1.25ex;
-	border: 1px solid cyan;
-	border-radius: 1ex;
-	font-size: 0.666666rem;
-	background-color: transparent;
-	color: cyan;
-	vertical-align: middle;
-}
+  padding: 0.5ex 1ex 0.5ex 1.25ex;
+  border: 1px solid cyan;
+  border-radius: 1ex;
+  font-size: 0.66667rem;
+  background-color: transparent;
+  color: cyan;
+  vertical-align: middle; }
 
 nav input {
-	height: 0.666666rem;
-}
+  height: 0.66667rem; }
 
 nav button {
-	height: 1.25rem;
-}
+  height: 1.25rem; }
 
 nav form p {
-	overflow: hidden;
-	line-height: 1.5rem;
-}
+  overflow: hidden;
+  line-height: 1.5rem; }
 
 span.network {
-	text-align: center;
-	margin-bottom: 1ex;
-}
+  text-align: center;
+  margin-bottom: 1ex; }
 
-nav label {
-}
 
 nav input {
-	display: block;
-}
+  vertical-align: baseline; }
+
+/* ----------------------------------------------
+ * Search/results
+ * ---------------------------------------------- */
+#search-results li {
+  overflow: hidden;
+  padding-bottom: 1ex;
+  border-bottom: 1px solid rgba(173, 216, 230, 0.5);
+  margin-bottom: 1ex; }
+#search-results img {
+  float: right;
+  width: 80px;
+  height: 40px; }
+#search-results span {
+  display: block; }

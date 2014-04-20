@@ -5,5 +5,37 @@ title: Browse
 			<h2>Browse the poems</h2>
  			<fieldset>
 				<legend>Search</legend>
+				<p>
+					<label for="topic">Topic</label>
+					<input type="text" id="topic" placeholder="type something!">
+				</p>
+				<p>
+					<label for="tags">Tags</label>
+					<input type="text" id="tags" placeholder="a, list, of, tag phrases">
+				</p>
 			</fieldset>
+
+			<fieldset>
+				<legend>Collections</legend>
+				<p><button type="submit" name="contributer" value="current">More from this poet</button></p>
+				<p><button type="submit" name="twentyfive" value="top">Top 25 poems</button></p>
+				<p><button type="submit" name="other" value="other">Some other category </button></p>
 		</form>
+
+		<h2 class="accordion__title">Search results</h2>
+		<ol id="search-results">
+			{{#each poems}}
+			<li class="poem poem--result">
+				{{#if imagefile}}
+				<img src="{{imagespath}}/thumbs/{{imagefile}}" alt="" class="poem__image">
+				{{#if title}}<span class="poem__title">{{title}}</span>{{/if}}
+				{{/if}}
+
+				{{#unless imagefile}}
+				{{#if title}}<span class="poem__title">{{title}}</span>{{/if}}
+				{{#unless title}}<span class="poem__body">{{body}}</span>{{/unless}}
+				{{/unless}}
+
+			</li>
+			{{/each}}
+		</ol>

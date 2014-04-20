@@ -1,10 +1,10 @@
 {
   "name": "3wp-v2-prototype",
- "description": "Same as title.",
+  "description": "Same as title.",
   "version": "0.1.0",
   "homepage": "https://github.com/simondell/3wp-v2-prototype",
   "author": {
-    "name": "",
+    "name": "Simon Dell",
     "url": "http://github.com/simondell/"
   },
   "repository": {
@@ -27,7 +27,8 @@
     "grunt-contrib-connect": "~0.7.1",
     "grunt-contrib-watch": "~0.6.1",
     "load-grunt-tasks": "~0.4.0",
-    "time-grunt": "~0.3.1"
+    "time-grunt": "~0.3.1",
+    "grunt-sass": "~0.12.1"
   },
   "licenses": [
     {

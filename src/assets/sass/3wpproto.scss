@@ -1,0 +1,223 @@
+/* ----------------------------------------------
+ * Reset (actually, I should just include a reset here... )
+ * ---------------------------------------------- */
+
+article {
+	display: block;
+}
+
+h1, p, ul, ol, li {
+	padding: 0;
+	margin: 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+
+/* ----------------------------------------------
+ * Mixins
+ * ---------------------------------------------- */
+
+
+@mixin wrapper ( $bg, $fg ) {
+	padding: 1ex 2ex;
+	border-radius: 4px;
+	box-shadow: 0 8px 20px 2px rgba(0,0,0,0.1);
+	background-color: $bg;
+	color: $fg;
+}
+
+.accordion__title {
+	font-size: 1;
+	margin-top: 1em;
+	margin-bottom: 1ex;
+	width: 100%;
+	border-bottom: 1px solid lightblue;
+}
+
+
+/* ----------------------------------------------
+ * Fonts
+ * ---------------------------------------------- */
+
+html {
+	font-size: 16px;
+	line-height: 1.25; // 20px line height, 20px vertical metre
+
+	/* using http://css-tricks.com/perfect-full-page-background-image/ */
+	background: red url(../images/fullsize/000o_almost_done_love_smaller.JPG) fixed no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	font-family: Helvetica;
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+
+
+/* ----------------------------------------------
+ * Poems
+ * ---------------------------------------------- */
+
+.poem--main {
+	@include wrapper( red, yellow );
+	position: absolute;
+	top: 60%;
+	left: 8%;
+	width: 400px;
+	font-size: 2rem;
+}
+
+.poem__title { font-size: 0.5em; }
+.poem__body { font-weight: 700; }
+
+.poem--result .poem__title { font-size: 1em; }
+
+
+
+/* ----------------------------------------------
+ * Navigation & tools
+ * ---------------------------------------------- */
+
+header {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 400px;
+}
+
+	nav {
+		// padding: 0.5ex 1ex 0.5ex 1.25ex;
+		@include wrapper( navy, lightblue );
+		margin-bottom: 1ex;
+	}
+
+	.site-title {
+		display: inline-block;
+		vertical-align: middle;
+display: none;
+	}
+
+	.site-title span {
+		display: block;
+		// font-size: 0.5rem;
+		line-height: 0.75;
+		text-align: center;
+	}
+
+	#tools {
+		font-size: 3rem;
+		text-align: right;
+	}
+
+	#tools li {
+		display: inline-block;
+		margin-left: 0.75ex;
+		vertical-align: middle;
+	}
+
+
+
+	#tools a {
+		position: relative;
+		overflow: hidden;
+		// font-size: 40px;
+		width: 3rem;
+		height: 3rem;
+		text-decoration: none;
+		text-indent: 100%;
+		white-space: nowrap;
+		color: cyan;
+	}
+
+	#tools a:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2rem;
+		text-indent: 0;
+		text-align: center;
+	}
+
+
+	/* log in */
+		nav form {
+		width: 100%;
+	}
+
+	nav fieldset {
+		padding: 0;
+		margin: 0 0 1em;
+		border: 0;
+		font-size: 0.666666rem;
+	}
+
+	nav legend {
+		@extend .accordion__title;
+	}
+
+	nav input, nav button {
+		padding: 0.5ex 1ex 0.5ex 1.25ex;
+		border: 1px solid cyan;
+		border-radius: 1ex;
+		font-size: 0.666666rem;
+		background-color: transparent;
+		color: cyan;
+		vertical-align: middle;
+	}
+
+	nav input {
+		height: 0.666666rem;
+	}
+
+	nav button {
+		height: 1.25rem;
+	}
+
+	nav form p {
+		overflow: hidden;
+		line-height: 1.5rem;
+	}
+
+	span.network {
+		text-align: center;
+		margin-bottom: 1ex;
+	}
+
+	nav label {
+	}
+
+	nav input {
+		vertical-align: baseline;
+	}
+
+
+/* ----------------------------------------------
+ * Search/results
+ * ---------------------------------------------- */
+
+#search-results {
+	li {
+		overflow: hidden;
+		padding-bottom: 1ex;
+		border-bottom: 1px solid rgba(lightblue, 0.5);
+		margin-bottom: 1ex;
+	}
+
+	img {
+		float: right;
+		width: 80px;
+		height: 40px;
+	}
+
+	span {
+		display: block;
+	}
+}

@@ -18,6 +18,8 @@
 module.exports = function(grunt) {
 
   require('time-grunt')(grunt);
+  // require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt, {pattern: ['grunt-*', 'assemble']});
 
   // Project configuration.
   grunt.initConfig({
@@ -28,6 +30,10 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      sass: {
+        files: ['<%= config.src %>/assets/{,*/}*.scss'],
+        tasks: ['sass']
+      },
       assemble: {
         files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
         tasks: ['assemble']
@@ -77,19 +83,38 @@ module.exports = function(grunt) {
       }
     },
 
+    sass: {
+      // options: {                      // dictionary of render options
+      //     includePaths: [
+      //         '<%= config.src %>/assets/sass/'
+      //     ]
+      // },
+      beast: {
+        files: {
+            'dist/assets/css/3wpproto.css': 'src/assets/sass/3wpproto.scss'
+        }
+      }
+    },
+
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: [
+      '<%= config.dist %>/assets/css/3wpproto.css',
+      '<%= config.dist %>/**/*.{html,xml}',
+    ]
 
   });
 
-  grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  // grunt.loadNpmTasks('assemble');
+  // grunt.loadNpmTasks('grunt-contrib-clean');
+  // grunt.loadNpmTasks('grunt-contrib-connect');
+  // grunt.loadNpmTasks('grunt-contrib-watch');
+  // grunt.loadNpmTasks('grunt-sass');
+
 
   grunt.registerTask('server', [
     'clean',
+    'sass',
     'assemble',
     'connect:livereload',
     'watch'
@@ -97,11 +122,12 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean',
+    'sass',
     'assemble'
   ]);
 
   grunt.registerTask('default', [
-    'build'
+    'server'
   ]);
 
 };

@@ -16,36 +16,101 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
 
-    	<div role="main" class="poem">
-		<h1>Sorry</h1>
-		<p>Almost done, love</p>
-	</div>
+    	<article class="poem poem--main">
+		<h1 class="poem__title">Sorry</h1>
+		<p class="poem__body">Almost done, love</p>
+	</article>
 
 
-    <nav>
+    <header role="banner">
       <div class="site-title">
         <span>three</span>
         <span>word</span>
         <span>poems</span>
       </div>
 
-      <ul>
-        <li><a class="fa fa-search" href="browse.html">Poems</a></li
-        ><li><a class="fa fa-sign-in" href="login.html">Log in</a></li
-        ><li><a class="fa fa-info-circle" href="about.html">About</a></li>
-      </ul>
+      <nav>
+        <ul id="tools">
+          <li><a class="fa fa-search" href="browse.html">Poems</a></li
+          ><li><a class="fa fa-sign-in" href="login.html">Log in</a></li
+          ><li><a class="fa fa-info-circle" href="about.html">About</a></li>
+        </ul>
 
-      
+        
 		<form action="editor.html" name="login">
 			<h2>Browse the poems</h2>
  			<fieldset>
 				<legend>Search</legend>
+				<p>
+					<label for="topic">Topic</label>
+					<input type="text" id="topic" placeholder="type something!">
+				</p>
+				<p>
+					<label for="tags">Tags</label>
+					<input type="text" id="tags" placeholder="a, list, of, tag phrases">
+				</p>
 			</fieldset>
+
+			<fieldset>
+				<legend>Collections</legend>
+				<p><button type="submit" name="contributer" value="current">More from this poet</button></p>
+				<p><button type="submit" name="twentyfive" value="top">Top 25 poems</button></p>
+				<p><button type="submit" name="other" value="other">Some other category </button></p>
 		</form>
 
-    </nav>
+		<h2 class="accordion__title">Search results</h2>
+		<ol id="search-results">
+			
+			<li class="poem poem--result">
+				
+				<img src="/thumbs/000o_almost_done_love_smaller.jpg" alt="" class="poem__image">
+				<span class="poem__title">Sorry</span>
+				
+
+				
+
+			</li>
+			
+			<li class="poem poem--result">
+				
+				<img src="/thumbs/173o_blow_your_job.jpg" alt="" class="poem__image">
+				
+				
+
+				
+
+			</li>
+			
+			<li class="poem poem--result">
+				
+				<img src="/thumbs/71o_callthepolice.jpg" alt="" class="poem__image">
+				
+				
+
+				
+
+			</li>
+			
+			<li class="poem poem--result">
+				
+				<img src="/thumbs/57o_IMG_0602.jpg" alt="" class="poem__image">
+				<span class="poem__title">In the papers</span>
+				
+
+				
+
+			</li>
+			
+		</ol>
+      </nav>
+
+      
+
+    </header>
+
 
 
   </body>
